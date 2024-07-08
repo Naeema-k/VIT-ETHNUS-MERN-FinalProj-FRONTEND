@@ -10,7 +10,10 @@ const EventForm = () => {
     e.preventDefault();
     const newEvent = { name, date, description };
     try {
-      await axios.post("http://localhost:5000/api/events", newEvent);
+      await axios.post(
+        "https://vit-ethnus-mern-finalproj-backend.onrender.com:5000/api/events",
+        newEvent
+      );
       setName("");
       setDate("");
       setDescription("");
